@@ -1,10 +1,16 @@
 import CMS from 'netlify-cms-app'
-import cloudinary from 'netlify-cms-media-library-cloudinary'
-import uploadcare from 'netlify-cms-media-library-uploadcare'
 
 import RecipePostPreview from './preview-templates/RecipePostPreview'
+import {
+  IngredientsCategoriesControl,
+  IngredientsCategoriesPreview,
+  ingredientsSchema,
+} from './widgets/ingredients'
 
-CMS.registerMediaLibrary(uploadcare)
-CMS.registerMediaLibrary(cloudinary)
-
+CMS.registerWidget(
+  'ingredients',
+  IngredientsCategoriesControl,
+  IngredientsCategoriesPreview,
+  ingredientsSchema,
+)
 CMS.registerPreviewTemplate('recipes', RecipePostPreview)

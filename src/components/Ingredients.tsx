@@ -76,13 +76,13 @@ export default function Ingredients({ ingredients, servings: servingsProp, subRe
         <p className="font-bold">Ingrédients :</p>
         <IngredientsList ingredients={ingredients} quantityFactor={servings / servingsProp} />
         {subRecipes?.map((subRecipe) => (
-          <Fragment key={subRecipe.title}>
-            <p>{subRecipe.title}</p>
+          <div key={subRecipe.title} className="pt-2">
+            <p className="font-bold">{subRecipe.title} :</p>
             <IngredientsList
               ingredients={subRecipe.ingredients}
               quantityFactor={servings / servingsProp}
             />
-          </Fragment>
+          </div>
         ))}
       </div>
     </>
