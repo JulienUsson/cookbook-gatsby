@@ -19,5 +19,5 @@ Pulldown a local copy of the Github repository Netlify created for you, with the
 ```
 $ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
 $ cd [REPO_NAME]
-$ yarn start
+$ npm run start
 ```

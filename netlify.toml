@@ -1,13 +1,9 @@
 [build]
-  publish = "public"
-  command = "yarn netlify:build"
+publish = "public"
+command = "npm run netlify:build"
 
 [[plugins]]
 package = "@netlify/plugin-gatsby"
 
-[build.environment]
-  YARN_VERSION = "1.22.17"
-  YARN_FLAGS = "--no-ignore-optional"
-
 [context.production]
-  environment = { GATSBY_CONCURRENT_DOWNLOAD = "50" }
+environment = { GATSBY_CONCURRENT_DOWNLOAD = "50" }

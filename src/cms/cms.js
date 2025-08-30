@@ -1,16 +1,16 @@
-import CMS from 'netlify-cms-app'
+import CMS from "decap-cms-app";
 
-import RecipePostPreview from './preview-templates/RecipePostPreview'
+import RecipePostPreview from "./preview-templates/RecipePostPreview";
 import {
   IngredientsCategoriesControl,
   IngredientsCategoriesPreview,
   ingredientsSchema,
-} from './widgets/ingredients'
+} from "./widgets/ingredients";
 
 CMS.registerWidget(
-  'ingredients',
+  "ingredients",
   IngredientsCategoriesControl,
   IngredientsCategoriesPreview,
-  ingredientsSchema,
-)
-CMS.registerPreviewTemplate('recipes', RecipePostPreview)
+  ingredientsSchema
+);
+CMS.registerPreviewTemplate("recipes", RecipePostPreview);
